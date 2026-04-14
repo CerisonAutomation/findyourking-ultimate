@@ -1,0 +1,32 @@
+{
+  "name": "@fyk/web",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "type-check": "tsc --noEmit",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@fyk/auth": "workspace:*",
+    "@fyk/core": "workspace:*",
+    "@fyk/schemas": "workspace:*",
+    "@fyk/supabase": "workspace:*",
+    "@fyk/types": "workspace:*",
+    "@fyk/ui": "workspace:*",
+    "@fyk/utils": "workspace:*",
+    "next": "^15.2.4",
+    "next-auth": "^5.0.0-beta.28",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "typescript": "^5.7.0",
+    "vitest": "^2.1.0"
+  }
+}
