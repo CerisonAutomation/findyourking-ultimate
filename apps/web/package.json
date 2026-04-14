@@ -18,10 +18,17 @@
     "@fyk/types": "workspace:*",
     "@fyk/ui": "workspace:*",
     "@fyk/utils": "workspace:*",
+    "@supabase/ssr": "^0.6.0",
+    "@supabase/supabase-js": "^2.47.0",
+    "@tanstack/react-query": "^5.62.0",
+    "framer-motion": "^11.0.0",
+    "lucide-react": "^0.468.0",
     "next": "^15.2.4",
-    "next-auth": "^5.0.0-beta.28",
+    "next-themes": "^0.4.3",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react-dom": "^19.0.0",
+    "sonner": "^1.7.0",
+    "zustand": "^5.0.0"
   },
   "devDependencies": {
     "@types/react": "^19.0.0",
