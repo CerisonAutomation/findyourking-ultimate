@@ -253,6 +253,12 @@ importers:
       '@fyk/types':
         specifier: workspace:*
         version: link:../types
+      clsx:
+        specifier: ^2.1.1
+        version: 2.1.1
+      tailwind-merge:
+        specifier: ^2.5.4
+        version: 2.6.1
     devDependencies:
       typescript:
         specifier: ^5.7.0
