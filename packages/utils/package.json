@@ -16,7 +16,7 @@
   "dependencies": {
     "@fyk/types": "workspace:*",
     "clsx": "^2.1.1",
-    "tailwind-merge": "^2.5.4"
+    "tailwind-merge": "^2.6.0"
   },
   "devDependencies": {
     "typescript": "^5.7.0",

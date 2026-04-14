@@ -32,7 +32,7 @@ export function isMutualMatch(
 export function getMatchStatusLabel(status: MatchStatus): string {
   const labels: Record<MatchStatus, string> = {
     pending: "Pending",
-    accepted: "Matched!",
+    matched: "Matched!",
     rejected: "Passed",
     expired: "Expired",
   };
