@@ -8,7 +8,19 @@
     ".": "./src/index.ts",
     "./button": "./src/components/button.tsx",
     "./card": "./src/components/card.tsx",
-    "./input": "./src/components/input.tsx"
+    "./input": "./src/components/input.tsx",
+    "./avatar": "./src/components/avatar.tsx",
+    "./badge": "./src/components/badge.tsx",
+    "./dialog": "./src/components/dialog.tsx",
+    "./tabs": "./src/components/tabs.tsx",
+    "./select": "./src/components/select.tsx",
+    "./label": "./src/components/label.tsx",
+    "./textarea": "./src/components/textarea.tsx",
+    "./switch": "./src/components/switch.tsx",
+    "./separator": "./src/components/separator.tsx",
+    "./skeleton": "./src/components/skeleton.tsx",
+    "./toast": "./src/components/toast.tsx",
+    "./progress": "./src/components/progress.tsx"
   },
   "scripts": {
     "build": "tsc -p tsconfig.json",
@@ -17,9 +29,19 @@
   },
   "dependencies": {
     "@fyk/utils": "workspace:*",
+    "@radix-ui/react-avatar": "^1.1.0",
+    "@radix-ui/react-dialog": "^1.1.0",
+    "@radix-ui/react-label": "^2.1.0",
+    "@radix-ui/react-progress": "^1.1.0",
+    "@radix-ui/react-select": "^2.1.0",
+    "@radix-ui/react-separator": "^1.1.0",
     "@radix-ui/react-slot": "^1.1.0",
+    "@radix-ui/react-switch": "^1.1.0",
+    "@radix-ui/react-tabs": "^1.1.0",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.0",
+    "lucide-react": "^0.469.0",
+    "sonner": "^1.7.0",
     "tailwind-merge": "^2.6.0"
   },
   "devDependencies": {
