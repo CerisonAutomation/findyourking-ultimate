@@ -60,7 +60,11 @@ export async function signInWithGoogle(
 }
 
 export async function resetPassword(supabase: SupabaseClient, email: string) {
-  const redirectTo = `${process.env["NEXT_PUBLIC_APP_URL"]}/auth/reset-password`;
+  const appUrl = process.env["NEXT_PUBLIC_APP_URL"];
+  if (!appUrl) {
+    throw new Error("Missing NEXT_PUBLIC_APP_URL environment variable");
+  }
+  const redirectTo = `${appUrl}/auth/reset-password`;
   const { error } = await supabase.auth.resetPasswordForEmail(email, {
     redirectTo,
   });

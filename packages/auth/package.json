@@ -12,9 +12,7 @@
     "type-check": "tsc --noEmit",
     "lint": "eslint src --ext .ts"
   },
-  "dependencies": {
-    "@fyk/types": "workspace:*"
-  },
+  "dependencies": {},
   "devDependencies": {
     "typescript": "^5.7.0"
   },
