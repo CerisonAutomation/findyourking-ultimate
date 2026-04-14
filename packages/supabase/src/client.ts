@@ -1,10 +1,7 @@
-import { createClient } from "@supabase/supabase-js";
+import { createBrowserClient } from "@supabase/ssr";
+import type { Database } from "./database.types";
 
-/**
- * Create a Supabase browser client.
- * Uses NEXT_PUBLIC_SUPABASE_URL and NEXT_PUBLIC_SUPABASE_ANON_KEY env vars.
- */
-export function createBrowserClient() {
+export function createSupabaseBrowserClient() {
   const url = process.env["NEXT_PUBLIC_SUPABASE_URL"];
   const key = process.env["NEXT_PUBLIC_SUPABASE_ANON_KEY"];
 
@@ -14,7 +11,7 @@ export function createBrowserClient() {
     );
   }
 
-  return createClient(url, key);
+  return createBrowserClient<Database>(url, key);
 }
 
-export { createClient } from "@supabase/supabase-js";
+export { createBrowserClient } from "@supabase/ssr";

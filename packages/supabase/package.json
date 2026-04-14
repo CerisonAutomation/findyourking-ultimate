@@ -7,7 +7,9 @@
   "exports": {
     ".": "./src/index.ts",
     "./client": "./src/client.ts",
-    "./server": "./src/server.ts"
+    "./server": "./src/server.ts",
+    "./middleware": "./src/middleware.ts",
+    "./types": "./src/database.types.ts"
   },
   "scripts": {
     "build": "tsc -p tsconfig.json",
@@ -16,9 +18,18 @@
   },
   "dependencies": {
     "@fyk/types": "workspace:*",
+    "@supabase/ssr": "^0.6.0",
     "@supabase/supabase-js": "^2.47.0"
   },
   "devDependencies": {
     "typescript": "^5.7.0"
+  },
+  "peerDependencies": {
+    "next": ">=15.0.0"
+  },
+  "peerDependenciesMeta": {
+    "next": {
+      "optional": true
+    }
   }
 }
