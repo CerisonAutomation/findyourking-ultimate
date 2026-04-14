@@ -2,6 +2,9 @@
 
 import { useState } from "react";
 import { Bell, Lock, Eye, Crown, Trash2, ChevronRight } from "lucide-react";
+import { Switch } from "@fyk/ui";
+
+export const metadata = { title: "Settings" };
 
 export default function SettingsPage() {
   const [activeTab, setActiveTab] = useState<"account" | "notifications" | "privacy" | "subscription" | "danger">("account");
@@ -98,20 +101,10 @@ export default function SettingsPage() {
               ).map(([key, label]) => (
                 <div key={key} className="flex items-center justify-between py-2">
                   <span className="text-sm font-medium text-foreground">{label}</span>
-                  <button
-                    role="switch"
-                    aria-checked={notifications[key]}
-                    onClick={() => setNotifications((n) => ({ ...n, [key]: !n[key] }))}
-                    className={`relative h-5 w-9 rounded-full transition-colors ${
-                      notifications[key] ? "bg-purple-600" : "bg-input"
-                    }`}
-                  >
-                    <span
-                      className={`absolute top-0.5 left-0.5 h-4 w-4 rounded-full bg-white shadow-sm transition-transform ${
-                        notifications[key] ? "translate-x-4" : "translate-x-0"
-                      }`}
-                    />
-                  </button>
+                  <Switch
+                    checked={notifications[key]}
+                    onCheckedChange={(checked) => setNotifications((n) => ({ ...n, [key]: checked }))}
+                  />
                 </div>
               ))}
             </div>
@@ -128,20 +121,10 @@ export default function SettingsPage() {
               ).map(([key, label]) => (
                 <div key={key} className="flex items-center justify-between py-2">
                   <span className="text-sm font-medium text-foreground">{label}</span>
-                  <button
-                    role="switch"
-                    aria-checked={privacy[key]}
-                    onClick={() => setPrivacy((p) => ({ ...p, [key]: !p[key] }))}
-                    className={`relative h-5 w-9 rounded-full transition-colors ${
-                      privacy[key] ? "bg-purple-600" : "bg-input"
-                    }`}
-                  >
-                    <span
-                      className={`absolute top-0.5 left-0.5 h-4 w-4 rounded-full bg-white shadow-sm transition-transform ${
-                        privacy[key] ? "translate-x-4" : "translate-x-0"
-                      }`}
-                    />
-                  </button>
+                  <Switch
+                    checked={privacy[key]}
+                    onCheckedChange={(checked) => setPrivacy((p) => ({ ...p, [key]: checked }))}
+                  />
                 </div>
               ))}
             </div>
